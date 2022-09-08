@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(#eaeaf0,#1bffff,#eaeaf0);
+}
+
+.header {
+  font-family: 'poppins', sans-serif;
+  position: absolute;
+  top: 620px;
+  font-size: 30px;
+}
+
+h3 {
+  color: #1f67db;
+}
+
+.loader {
+  position: relative;
+  display: flex;
+  left: -75px;
+}
+
+.loader span {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  background: #eaeaf0;
+  margin: 0 10px;
+  border: 6px solid #eaeaf0;
+  border-radius: 50px;
+  box-shadow: -8px -8px 15px rgba(255,255,255,1),
+  8px 8px 15px rgba(0,0,0,0.2),
+  inset 3px 3px 5px rgba(0,0,0,0.1),
+  inset -1px -1px 5px rgba(255,255,255,1)
+}
+
+.loader span::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #5c89ff;
+  border-radius: 50px;
+  box-shadow:
+  inset 3px 3px 5px rgba(0,0,0,0.1),
+  inset -1px -1px 5px rgba(255,255,255,1);
+  transform: scale(0);
+  animation: animate 3.5s linear infinite, animateColor 5s linear infinite;
+  animation-delay: calc(var(--i) * 0.2s);
+}
+
+.icon {
+  position: relative;
+  top: 400px;
+  left: 210px;
+}
+
+.sosial {
+  position: absolute;
+  top: 75%;
+  font-size: 50px;
+  
+}
+
+@keyframes animate {
+  0%,9.99%,70.0001%
+  {
+    transform: scale(0)
+  }
+  10%,70%
+  {
+    transform: scale(1);
+  }
+}
+
+@keyframes animateColor {
+  0%
+  {
+    filter: hue-rotate(0deg);
+  }
+  100%
+  {
+    filter: hue-rotate(360deg);
+  }
+}
